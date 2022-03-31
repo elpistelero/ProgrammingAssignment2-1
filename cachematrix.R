@@ -1,6 +1,6 @@
 makeCacheMatrix <- function(x = matrix()) 
 {
-  # initialize the matrix to NULL
+ 
   inverse  <- NULL
   set <- function(y) 
   {
@@ -47,9 +47,9 @@ test <- function()
   my_matrix$get()
   my_matrix$getinverse()
   cacheSolve(my_matrix)
-  my_matrix$set(matrix(c(0,5,99,66), nrow=2, ncol=2)) # Modify existing matrix
-  cacheSolve(my_matrix)   # Computes, caches, and returns new matrix inverse
-  my_matrix$get()         # Returns matrix
+  my_matrix$set(matrix(c(0,5,99,66), nrow=2, ncol=2)) 
+  cacheSolve(my_matrix)   
+  my_matrix$get()         
   my_matrix$getinverse()  # Returns matrix inverse    
   my_matrix$get() %*% my_matrix$getinverse() # returns the identity matrix
 }
